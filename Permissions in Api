@@ -1,0 +1,21 @@
+[HttpGet]
+[Route ("api/BaseUrlWebAddr/GetAllProducts")]
+[ApiAccessPolicy(ProductId = Constants.Permissions.ProductConfiguration, Level = PermissionLevel.View)]
+public IActionResult GetAllProducts()
+{
+    var products = new[] { "Laptop", "Mouse", "Keyboard" };
+    return Ok(products);
+}
+
+[HttpGet("products/{id}")]
+public IActionResult GetProductById(int id)
+{
+    return Ok($"Product with ID: {id}");
+}
+
+
+
+
+
+
+
