@@ -1,0 +1,21 @@
+[TestClass]
+public class ProductsControllerTests
+{
+    [TestMethod]
+    public void GetAllProducts_ReturnsOkResultWithProducts()
+    {
+        // Arrange
+        var controller = new ProductsController();
+
+        // Act
+        var result = controller.GetAllProducts() as OkObjectResult;
+
+        // Assert
+        Assert.IsNotNull(result);
+        Assert.AreEqual(200, result.StatusCode);
+        var products = result.Value as string[];
+        Assert.IsNotNull(products);
+        Assert.AreEqual(3, products.Length);
+        CollectionAssert.Contains(products, "Laptop");
+    }
+}
