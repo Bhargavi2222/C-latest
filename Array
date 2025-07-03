@@ -1,0 +1,110 @@
+//Array
+// Create an array of four elements, and add values later
+string[] cars = new string[4];
+
+// Create an array of four elements and add values right away 
+string[] cars = new string[4] {"Volvo", "BMW", "Ford", "Mazda"};
+
+// Create an array of four elements without specifying the size 
+string[] cars = new string[] {"Volvo", "BMW", "Ford", "Mazda"};
+
+// Create an array of four elements, omitting the new keyword, and without specifying the size
+string[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+
+// to access the first car name.
+string[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+Console.WriteLine(cars[0]);
+
+// using for loop get car names from an array
+using System;
+
+namespace MyApplication
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      string[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+      for (int i = 0; i < cars.Length; i++) 
+      {
+        Console.WriteLine(cars[i]);
+      }
+    }
+  }
+}
+
+
+
+
+
+
+// using foreach retrieve car names from an array.
+using System;
+
+namespace MyApplication
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      string[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+      foreach (string i in cars) 
+      {
+        Console.WriteLine(i);
+      }   
+    }
+  }
+}
+
+
+//Array to sort
+using System;
+
+namespace MyApplication
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      // Sort a string
+      string[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+      Array.Sort(cars);
+      foreach (string i in cars)
+      {
+        Console.WriteLine(i);
+      }    
+      
+      // Sort an int
+      int[] myNumbers = {5, 1, 8, 9};
+      Array.Sort(myNumbers);
+      foreach (int i in myNumbers)
+      {
+        Console.WriteLine(i);
+      }
+    }
+  }
+}
+
+
+
+// 2D array
+using System;
+
+namespace MyApplication
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      int[,] numbers = { {1, 4, 2}, {3, 6, 8} };
+    
+      for (int i = 0; i < numbers.GetLength(0); i++) 
+      {  
+        for (int j = 0; j < numbers.GetLength(1); j++) 
+        {  
+          Console.WriteLine(numbers[i, j]);  
+        }  
+      }  
+    }
+  }
+}
