@@ -1,0 +1,147 @@
+using System;
+
+namespace MyApplication
+{
+  class Program
+  {
+    static void MyMethod(string fname) 
+    {
+      Console.WriteLine(fname + " Refsnes");
+    }
+
+    static void Main(string[] args)
+    {
+      MyMethod("Liam");
+      MyMethod("Jenny");
+      MyMethod("Anja");
+    }  
+  }
+}
+Output: 
+Liam Refsnes
+Jenny Refsnes
+Anja Refsnes
+
+-------------------------------------------------------------------
+
+//Default Parameter country = "Norway"
+static void MyMethod(string country = "Norway")
+{
+  Console.WriteLine(country);
+}
+
+static void Main(string[] args)
+{
+  MyMethod();
+}
+-------------------------------------------------------------------
+
+//Return value.  Outputs 8 (5 + 3)
+static int MyMethod(int x) 
+{
+  return 5 + x;
+}
+
+static void Main(string[] args)
+{
+  Console.WriteLine(MyMethod(3));
+}
+-------------------------------------------------------------------
+
+static int MyMethod(int x, int y) 
+{
+  return x + y;
+}
+static void Main(string[] args)
+{
+  Console.WriteLine(MyMethod(5, 3));
+}
+-------------------------------------------------------------------
+
+static int MyMethod(int x, int y) 
+{
+  return x + y;
+}
+static void Main(string[] args)
+{
+  int z = MyMethod(5, 3);
+  Console.WriteLine(z);
+}
+-------------------------------------------------------------------
+//Named Arguments
+
+using System;
+
+namespace MyApplication
+{
+  class Program
+  {
+    static void MyMethod(string child1, string child2, string child3)
+    {
+      Console.WriteLine("The youngest child is: " + child3);
+    }
+
+    static void Main(string[] args)
+    {
+      MyMethod(child3: "John", child1: "Liam", child2: "Liam");
+    }
+  }
+}
+
+-------------------------------------------------------------------
+
+//C# Method Overloading //Output Int: 13 Double: 10.559999999999999
+
+using System;
+
+namespace MyApplication
+{
+  class Program
+  {
+    static int PlusMethodInt(int x, int y)
+    {
+      return x + y;
+    }
+
+    static double PlusMethodDouble(double x, double y)
+    {
+      return x + y;
+    }
+
+    static void Main(string[] args)
+    {
+      int myNum1 = PlusMethodInt(8, 5);
+      double myNum2 = PlusMethodDouble(4.3, 6.26);
+      Console.WriteLine("Int: " + myNum1);
+      Console.WriteLine("Double: " + myNum2);
+    }  
+  }
+}
+-------------------------------------------------------------------
+//Method Overloading
+using System;
+
+namespace MyApplication
+{
+  class Program
+  {
+    static int PlusMethod(int x, int y)
+    {
+      return x + y;
+    }
+
+    static double PlusMethod(double x, double y)
+    {
+      return x + y;
+    }
+
+    static void Main(string[] args)
+    {
+      int myNum1 = PlusMethod(8, 5);
+      double myNum2 = PlusMethod(4.3, 6.26);
+      Console.WriteLine("Int: " + myNum1);
+      Console.WriteLine("Double: " + myNum2);
+    }  
+  }
+}
+-------------------------------------------------------------------
