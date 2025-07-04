@@ -1,0 +1,43 @@
+using System;
+namespace MyApplication
+{
+  class Car
+  {
+        string color = "Green";
+        static void Main(string[] args)
+        {
+            Car myObj = new Car();
+            Console.WriteLine(myObj.color);
+        }
+  }
+}
+----------------------------------------------------------------------------------
+Multiple Objects - output Blue
+Prog.cs 
+using System;
+
+namespace MyApplication
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      Car myObj = new Car();
+      Console.WriteLine(myObj.color);
+    }
+  }
+}
+
+
+Prog2.cs
+using System;
+
+namespace MyApplication
+{
+  class Car
+  {
+    public string color = "Blue";
+  }
+}
+
+
